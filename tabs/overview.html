@@ -86,15 +86,24 @@
                         <text x="45.68" y="108.00" text-anchor="middle" dominant-baseline="middle" fill="#f97316" font-size="11" font-weight="700">35/100</text>
                         <!-- 多邊形 -->
                         <polygon points="160.00,132.50 188.58,143.50 212.39,190.25 160.00,237.00 121.89,182.00 126.66,140.75" fill="rgba(139,92,246,0.25)" stroke="#a855f7" stroke-width="2" stroke-linejoin="round"/>
-                        <!-- 資料點 -->
-                        <circle cx="160.00" cy="132.50" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="188.58" cy="143.50" r="4" fill="#a855f7" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="212.39" cy="190.25" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="160.00" cy="237.00" r="4" fill="#10b981" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="121.89" cy="182.00" r="4" fill="#eab308" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="126.66" cy="140.75" r="4" fill="#f97316" stroke="#0f172a" stroke-width="2"/>
+                        <!-- 資料點 (依分數動態著色:>=60 綠 / 40-59 黃 / <40 紅) -->
+                        <circle cx="160.00" cy="132.50" r="5" fill="#ef4444" stroke="#0f172a" stroke-width="2"><title>節省 Tokens: 25/100 (低)</title></circle>
+                        <circle cx="188.58" cy="143.50" r="5" fill="#ef4444" stroke="#0f172a" stroke-width="2"><title>生活自動化: 30/100 (低)</title></circle>
+                        <circle cx="212.39" cy="190.25" r="5" fill="#eab308" stroke="#0f172a" stroke-width="2"><title>知識管理: 55/100 (中)</title></circle>
+                        <circle cx="160.00" cy="237.00" r="6" fill="#10b981" stroke="#0f172a" stroke-width="2"><title>網站建造: 70/100 (高)</title></circle>
+                        <circle cx="121.89" cy="182.00" r="5" fill="#eab308" stroke="#0f172a" stroke-width="2"><title>自我學習: 40/100 (中)</title></circle>
+                        <circle cx="126.66" cy="140.75" r="5" fill="#ef4444" stroke="#0f172a" stroke-width="2"><title>泛化工作流: 35/100 (低)</title></circle>
+                        <!-- 多邊形依最高能力 (網站建造 70) 採綠色漸層 -->
+                        <polygon points="160.00,132.50 188.58,143.50 212.39,190.25 160.00,237.00 121.89,182.00 126.66,140.75" fill="rgba(16,185,129,0.18)" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/>
                         <!-- 中心點 -->
-                        <circle cx="160" cy="160" r="3" fill="#a855f7"/>
+                        <circle cx="160" cy="160" r="3" fill="#10b981"/>
+                    </svg>
+                    <!-- 圖例 (SVG 外,避免與下方標籤重疊) -->
+                    <div style="display:flex;gap:12px;justify-content:center;margin-top:8px;font-size:11px;color:var(--text-muted)">
+                        <span style="display:inline-flex;align-items:center;gap:4px"><span style="display:inline-block;width:8px;height:8px;background:#10b981;border-radius:2px"></span>≥60 高</span>
+                        <span style="display:inline-flex;align-items:center;gap:4px"><span style="display:inline-block;width:8px;height:8px;background:#eab308;border-radius:2px"></span>40-59 中</span>
+                        <span style="display:inline-flex;align-items:center;gap:4px"><span style="display:inline-block;width:8px;height:8px;background:#ef4444;border-radius:2px"></span>&lt;40 低</span>
+                    </div>
                     </svg>
                     <div style="font-size:11px;color:var(--text-muted);margin-top:8px;line-height:1.5">
                         目前分數偏低，<br>

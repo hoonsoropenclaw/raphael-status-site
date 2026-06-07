@@ -10,10 +10,33 @@
 <div id="tab-content" class="tab-content">
         <div class="section">
             <div class="section-title">三層備援搜尋機制</div>
-            <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(6,182,212,0.08))">
-                <div style="font-size:14px;color:var(--accent-purple);margin-bottom:8px">🧠 核心理念：當 session_search 搜尋不到時，使用 MemPalace 語意搜尋</div>
-                <div style="font-size:13px;color:var(--text-secondary)">
-                    MemPalace 是拉斐爾建立的長期記憶系統，採用房間/抽屜/翅膀結構儲存語意知識。三層搜尋確保持記憶召回零遺漏。
+            <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.7">
+                🧠 <strong style="color:var(--accent-purple)">核心理念</strong>:當 session_search 搜不到時,自動 fallback 到 MemPalace 語意搜尋。三層搜尋確保記憶召回零遺漏。
+            </div>
+            <div class="layer-diagram" style="margin-bottom:8px">
+                <div class="layer-item" style="border-left:4px solid var(--accent-blue)">
+                    <div class="layer-num" style="background:rgba(59,130,246,0.15);color:var(--accent-blue)">P1</div>
+                    <div class="layer-info">
+                        <div class="layer-title">快速層</div>
+                        <div class="layer-desc">本地對話記錄 FTS5 搜尋</div>
+                    </div>
+                    <span class="tag tag-blue">ms 級</span>
+                </div>
+                <div class="layer-item" style="border-left:4px solid var(--accent-purple)">
+                    <div class="layer-num" style="background:rgba(139,92,246,0.15);color:var(--accent-purple)">P2</div>
+                    <div class="layer-info">
+                        <div class="layer-title">備援層</div>
+                        <div class="layer-desc">MemPalace 向量語意搜尋</div>
+                    </div>
+                    <span class="tag tag-purple">秒級</span>
+                </div>
+                <div class="layer-item" style="border-left:4px solid var(--accent-cyan)">
+                    <div class="layer-num" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan)">P3</div>
+                    <div class="layer-info">
+                        <div class="layer-title">深度層</div>
+                        <div class="layer-desc">MiniMax LLM 重新排序</div>
+                    </div>
+                    <span class="tag tag-cyan">候選 ≤5</span>
                 </div>
             </div>
         </div>
