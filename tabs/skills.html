@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能目錄</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+    <div class="section">
+        <div class="section-title">技能領域分類</div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px;">
+            <div class="card">
+                <div style="font-size:12px;font-weight:600;color:var(--accent-purple);margin-bottom:12px">行政工作 ⭐⭐⭐ 最高優先</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-green">docx處理（docxtpl）</span><span class="tag tag-green">LINE請假核可系統</span><span class="tag tag-green">PyMuPDF PDF處理</span><span class="tag tag-green">DocuSeal 數位簽署</span><span class="tag tag-green">Excel 自動化（openpyxl）</span><span class="tag tag-green">大量郵件自動化（SMTP）</span><span class="tag tag-green">PDF 表單填寫</span><span class="tag tag-green">LangGraph 工作流</span><span class="tag tag-green">RPA Framework</span><span class="tag tag-green">xlwings Excel整合</span><span class="tag tag-green">MarkItDown 文檔轉換</span><span class="tag tag-yellow">校務行政流水線</span>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-size:12px;font-weight:600;color:var(--accent-purple);margin-bottom:12px">網頁設計 ⭐⭐⭐ 最高優先</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-green">Playwright 自動化</span><span class="tag tag-green">Scrapling 自適應爬蟲</span><span class="tag tag-green">Crawlee Python SDK</span><span class="tag tag-green">Playwright Stealth 反偵測</span><span class="tag tag-green">Patchright 反偵測</span><span class="tag tag-green">Camoufox 反偵測</span><span class="tag tag-green">Crawl4AI LLM友善爬蟲</span><span class="tag tag-green">DrissionPage 混合模式</span><span class="tag tag-yellow">Skyvern LLM驅動自動化</span><span class="tag tag-yellow">ScrapeGraphAI</span><span class="tag tag-yellow">Pydoll CDP</span><span class="tag tag-orange">前端開發（HTML/CSS/JS）</span>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-size:12px;font-weight:600;color:var(--accent-purple);margin-bottom:12px">程式設計 ⭐⭐⭐ 最高優先</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-green">Python 自動化</span><span class="tag tag-green">REST API 設計</span><span class="tag tag-green">FastAPI 生產部署</span><span class="tag tag-green">Flask API 實作</span><span class="tag tag-green">yfinance 技術分析</span><span class="tag tag-yellow">LangChain 代理系統</span><span class="tag tag-yellow">uv Python環境管理</span>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-size:12px;font-weight:600;color:var(--accent-yellow);margin-bottom:12px">金融工具 ⭐⭐ 中等優先</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-green">金融API四雄</span><span class="tag tag-green">MCP金融伺服器</span><span class="tag tag-green">twstock 台股套件</span><span class="tag tag-green">證交所 TWSE OpenAPI</span><span class="tag tag-green">xFinance 多源故障轉移</span><span class="tag tag-yellow">FinClaw AI量化引擎</span><span class="tag tag-yellow">Backtrader 回測</span><span class="tag tag-yellow">Freqtrade 加密Bot</span>
+                </div>
+            </div>
+            <div class="card">
+                <div style="font-size:12px;font-weight:600;color:var(--accent-yellow);margin-bottom:12px">系統工具 ⭐⭐ 中等優先</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <span class="tag tag-green">Sub-agent 設計（v7.1→v9.0）</span><span class="tag tag-green">Multi-Agent 協作模式</span><span class="tag tag-yellow">memU 24/7 主動記憶</span><span class="tag tag-yellow">graph-memory 知識圖譜</span><span class="tag tag-yellow">agentmemory 持久記憶</span><span class="tag tag-yellow">memPalace MCP</span><span class="tag tag-orange">MCP 工具使用</span><span class="tag tag-orange">技能安裝（ClawHub）</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">學習領域輪流順序</div>
+        <div class="table-wrap">
+            <table>
+                <tr><th>輪次</th><th>領域</th><th>主題</th><th>優先順序</th><th>預計消耗</th></tr>
+                <tr><td>1</td><td>admin</td><td>Word文件處理、校務流程自動化</td><td><span class="tag tag-green">⭐⭐⭐</span></td><td>180次</td></tr>
+                <tr><td>2</td><td>web</td><td>爬蟲自動化、無頭瀏覽器</td><td><span class="tag tag-green">⭐⭐⭐</span></td><td>180次</td></tr>
+                <tr><td>3</td><td>code</td><td>Python自動化、API整合</td><td><span class="tag tag-green">⭐⭐⭐</span></td><td>180次</td></tr>
+                <tr><td>4</td><td>finance</td><td>股票API、投資分析</td><td><span class="tag tag-yellow">⭐⭐</span></td><td>180次</td></tr>
+                <tr><td>5</td><td>system</td><td>MCP工具、Sub-agent設計</td><td><span class="tag tag-yellow">⭐⭐</span></td><td>180次</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🦞 技能呼叫統計</div>
+        <div style="margin-bottom:12px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+            <input type="text" id="skill-search" placeholder="搜尋技能名稱..." 
+                style="background:#1a2234; border:1px solid #1e293b; border-radius:8px; padding:8px 14px; color:#f1f5f9; font-size:13px; min-width:200px;"
+                oninput="filterSkills()">
+            <select id="skill-sort" onchange="sortSkills()" 
+                style="background:#1a2234; border:1px solid #1e293b; border-radius:8px; padding:8px 14px; color:#f1f5f9; font-size:13px;">
+                <option value="use_count">按累計呼叫排序（高→低）</option>
+                <option value="today_count">按今日呼叫排序</option>
+                <option value="name">按技能名稱排序</option>
+                <option value="last_used">按上次使用排序</option>
+            </select>
+            <span id="skill-count" style="color:#94a3b8; font-size:13px;">共 0 個技能</span>
+        </div>
+        <div class="table-wrap">
+            <table id="skills-table">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>技能名稱</th>
+                        <th>今日呼叫</th>
+                        <th>累計呼叫</th>
+                        <th>上次使用</th>
+                        <th>狀態</th>
+                        <th>更新时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#1</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">metacognitive-learner</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">133</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-07</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#2</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-self-improvement</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">18</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-07</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#3</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">camofox-browser</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">16</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-01</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#4</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">trial-and-error</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">16</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#5</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">camofox</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">14</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#6</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">general-workflow</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">14</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#7</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">Agent Browser</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">12</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#8</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-memory-systems</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">11</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#9</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">frontend-dev</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">11</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#10</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">site-qa-checklist</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">11</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#11</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-config-checklist</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">10</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#12</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">alt-token-secrets-layout</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">9</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-05</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#13</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">website-design-principles</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">9</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-04</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-01</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#14</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">web_search</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">8</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-01</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#15</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">portal-401-troubleshoot</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">7</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-04</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#16</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">program-project-planner</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">7</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#17</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">portal-auto-upload</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">6</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-04</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-03</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#18</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">productivity/portal-auto-upload</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">6</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-04</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-04</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#19</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-tier-router</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">5</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#20</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">user-collaboration-style</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">5</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-07</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#21</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-orchestration-multi-agent-optimize</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#22</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">ai-agent-development</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#23</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">design-taste-frontend</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#24</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">frontend-design</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#25</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">github</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-05</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#26</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-config-layout</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#27</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">vision-analysis</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">4</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-04</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#28</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-memory-mcp</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">3</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-30</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#29</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agentfolio</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">3</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#30</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-status-site</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">3</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-01</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#31</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-orchestrator</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-03</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#32</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">audit-code</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#33</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">autonomous-ai-agents/metacognitive-learner</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#34</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">code-assist</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#35</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">media/youtube-content</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-31</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#36</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">persistent-subagent</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#37</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">vercel</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">2</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-01</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#38</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">Code</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-30</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#39</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">Connection Resilience</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-07</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-07</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#40</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-system-backup</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#41</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">antigravity-design-expert</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-30</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#42</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">automated-sop-validation</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#43</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">automation-workflows</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-01</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-01</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#44</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">autonomous-ai-agents/persistent-subagent</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#45</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">beautiful-mermaid</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-30</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#46</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">cron-job-health-monitor</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-05</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#47</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">cron-secret-leak-emergency-fix</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-05</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-05</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#48</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">gsap-scrolltrigger</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#49</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hallmark</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#50</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-config-tuning</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#51</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-internal</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#52</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">intelligence-route</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#53</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">local-rag-system</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-31</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#54</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">pdd</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-02</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-02</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#55</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">playwright-mcp</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-05-30</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-05-30</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#56</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">tradingagents</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-03</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-03</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#57</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">vercel-deployment</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#58</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">workspace-folder-layout</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">1</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">2026-06-06</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#59</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">agent-browser</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-04</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#60</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">connection-resilience</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-07</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#61</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">deployment-verification-sop</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#62</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">financial-data</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-03</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#63</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">hermes-deploy-verification</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+<tr class="skill-row">
+                        <td style="color:#64748b; font-size:12px;">#64</td>
+                        <td><span class="skill-name" style="font-weight:600; color:#f1f5f9;">multi-model-routing-cheatsheet</span></td>
+                        <td style="font-size:13px;">-</td>
+                        <td><span style="color:#3b82f6; font-weight:700; font-size:14px;">0</span></td>
+                        <td style="color:#94a3b8; font-size:12px;">-</td>
+                        <td><span class="tag tag-green">active</span></td>
+                        <td style="color:#64748b; font-size:11px;">2026-06-06</td>
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+
+<script>
+function filterSkills() {
+    const query = document.getElementById('skill-search').value.toLowerCase();
+    const rows = document.querySelectorAll('.skill-row');
+    let visible = 0;
+    rows.forEach(row => {
+        const name = row.querySelector('.skill-name').textContent.toLowerCase();
+        row.style.display = name.includes(query) ? '' : 'none';
+        if (name.includes(query)) visible++;
+    });
+    document.getElementById('skill-count').textContent = '共 ' + visible + ' 個技能';
+}
+
+function sortSkills() {
+    const sortBy = document.getElementById('skill-sort').value;
+    const tbody = document.querySelector('#skills-table tbody');
+    const rows = Array.from(tbody.querySelectorAll('.skill-row'));
+    const getVal = (row, col) => {
+        const cells = row.querySelectorAll('td');
+        if (col === 'name') return cells[1].textContent.toLowerCase();
+        if (col === 'today_count') return parseInt(cells[2].textContent) || 0;
+        if (col === 'use_count') return parseInt(cells[3].textContent) || 0;
+        if (col === 'last_used') return cells[4].textContent || '';
+        return 0;
+    };
+    rows.sort((a, b) => {
+        if (sortBy === 'name' || sortBy === 'last_used') {
+            return getVal(a, sortBy).localeCompare(getVal(b, sortBy));
+        }
+        return getVal(b, sortBy) - getVal(a, sortBy);
+    });
+    rows.forEach(row => tbody.appendChild(row));
+    let rank = 1;
+    rows.forEach(row => {
+        if (row.style.display !== 'none') {
+            row.querySelector('td').textContent = '#' + rank;
+            rank++;
+        }
+    });
+}
+
+// Initial count
+document.getElementById('skill-count').textContent = '共 ' + document.querySelectorAll('.skill-row').length + ' 個技能';
+</script>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

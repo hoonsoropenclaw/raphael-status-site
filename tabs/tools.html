@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具生態系</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">內建工具（toolsets）</div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">🌐 web</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        網頁搜尋、資訊檢索、線上研究<br>
+                        <span style="color:var(--text-muted)">雙軌搜尋：Ollama + Tavily</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">💻 terminal</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        Bash 腳本、系統操作、Git、npm、vercel CLI<br>
+                        <span style="color:var(--text-muted)">timeout: 180s</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">📁 file</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        讀寫檔案、搜尋、patch 編輯<br>
+                        <span style="color:var(--text-muted)">max: 100KB</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">🔍 search</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        session_search、mempalace搜尋<br>
+                        <span style="color:var(--text-muted)">FTS5 + 向量 + LLM</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">⏰ cronjob</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        排程任務、週期性自動化<br>
+                        <span style="color:var(--text-muted)">cron_mode: deny</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">📋 todo</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        工作階段任務追蹤<br>
+                        <span style="color:var(--text-muted)">id/content/status</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">🖼️ vision</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        圖片分析、視覺理解<br>
+                        <span style="color:var(--text-muted)">vision-analysis skill</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">🔧 skills</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        技能載入、管理、新增<br>
+                        <span style="color:var(--text-muted)">152 skills</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:12px">🐙 browser</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        網頁自動化、CDP 操控<br>
+                        <span style="color:var(--text-muted)">agent-browser CLI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">MCP 工具（MCP Servers）</div>
+            <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">📚 mempalace</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        長期記憶系統<br>
+                        <span style="color:var(--text-muted)">MCP 工具：mempalace__mempalace_search</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">💬 xurl（X/Twitter）</div>
+                    <div style="font-size:11px;color:var(--text-secondary);line-height:1.8">
+                        發推、搜尋、DM、媒體發布<br>
+                        <span style="color:var(--text-muted)">xurl CLI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">模型供應商</div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>供應商</th><th>模型</th><th>用途</th><th>狀態</th></tr>
+                    <tr><td>MiniMax（主要）</td><td>MiniMax-M2.7</td><td>主要推理模型</td><td><span class="tag tag-green">啟用</span></td></tr>
+                    <tr><td>OpenRouter（備用）</td><td>—</td><td>failover 備用</td><td><span class="tag tag-yellow">待設定</span></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">金融工具 API</div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">📈 Twelve Data</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">即時價格、、技術指標</div>
+                    <div style="margin-top:8px"><span class="tag tag-green">已設定</span></div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">📊 Alpha Vantage</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">股票/外匯/加密數據</div>
+                    <div style="margin-top:8px"><span class="tag tag-green">已設定</span></div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">🏛️ FRED</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">美國經濟數據</div>
+                    <div style="margin-top:8px"><span class="tag tag-green">已設定</span></div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">🦊 Finnhub</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">公司新聞、情緒分析</div>
+                    <div style="margin-top:8px"><span class="tag tag-green">已設定</span></div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">📰 ClawHub</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">自訂金融資料源</div>
+                    <div style="margin-top:8px"><span class="tag tag-green">已設定</span></div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">❌ Financial Modeling Prep</div>
+                    <div style="font-size:11px;color:var(--text-secondary)">免費版已停用</div>
+                    <div style="margin-top:8px"><span class="tag tag-red">已停用</span></div>
+                </div>
+            </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

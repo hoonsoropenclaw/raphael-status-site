@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赫米斯 (Hermes) - 超級學習者系統狀態</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="tabs/md-files.css">
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <div class="avatar">赫</div>
+            <div class="header-info">
+                <h1>赫米斯 <span style="font-size:16px;color:var(--text-muted);font-weight:400">Hermes Agent</span></h1>
+                <p>超級學習者 · N100 策略代理 · 152 Skills 生態系</p>
+            </div>
+        </div>
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            <span>運行中 · v1.0</span>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="overview" onclick="loadTab('overview')">系統總覽</button>
+        <button class="tab-btn" data-tab="memory" onclick="loadTab('memory')">記憶系統</button>
+        <button class="tab-btn" data-tab="delegation" onclick="loadTab('delegation')">委派系統</button>
+        <button class="tab-btn" data-tab="tools" onclick="loadTab('tools')">工具生態系</button>
+        <button class="tab-btn" data-tab="skills" onclick="loadTab('skills')">技能目錄</button>
+        <button class="tab-btn" data-tab="soul" onclick="loadTab('soul')">身份靈魂</button>
+        <button class="tab-btn" data-tab="mdfiles" onclick="loadTab('mdfiles')">核心MD檔</button>
+        <button class="tab-btn" data-tab="scheduler" onclick="loadTab('scheduler')">排程自動化</button>
+        <button class="tab-btn" data-tab="learning" onclick="loadTab('learning')">學習系統</button>
+        <button class="tab-btn" data-tab="sysinfo" onclick="loadTab('sysinfo')">系統資訊</button>
+        <button class="tab-btn" data-tab="dashboard" onclick="loadTab('dashboard')">即時儀表板</button>
+    </div>
+
+    <!-- Tab Content Container -->
+    <div id="tab-content"></div>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/md-files.js"></script>
+<script>
+    // Tab loader - fetches tab HTML and injects into container
+    async function loadTab(tabName) {
+        const contentDiv = document.getElementById('tab-content');
+        const tabBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+
+        // Update active state
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        tabBtn.classList.add('active');
+
+        // Show loading state
+        contentDiv.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted)">載入中...</div>';
+
+        try {
+            const response = await fetch(`tabs/${tabName === 'mdfiles' ? 'md-files' : tabName === 'sysinfo' ? 'system-info' : tabName}.html`);
+            if (!response.ok) throw new Error('Failed to load');
+            let html = await response.text();
+
+            // Strip DOCTYPE, <html>, <head>, <body> wrapper if present
+            html = html.replace(/<!DOCTYPE[^>]*>/gi, '');
+            html = html.replace(/<html[^>]*>/gi, '');
+            html = html.replace(/<\/html>/gi, '');
+            html = html.replace(/<head>[\s\S]*?<\/head>/gi, '');
+            html = html.replace(/<body[^>]*>/gi, '');
+            html = html.replace(/<\/body>/gi, '');
+
+            // Extract just the inner content (tab-content div or main wrapper)
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const contentEl = doc.querySelector('#tab-content') || doc.body.firstElementChild || doc.body;
+
+            contentDiv.innerHTML = contentEl.innerHTML || html;
+
+            // mdfiles tab: trigger init after HTML is injected
+            if (tabName === 'mdfiles' && window.mdFilesInit) {
+                window.mdFilesInit();
+            }
+        } catch (e) {
+            contentDiv.innerHTML = `<div style="padding:40px;text-align:center;color:var(--accent-red)">載入失敗: ${tabName}</div>`;
+        }
+    }
+
+    // Initial load - overview tab
+    loadTab('overview');
+</script>
+</body>
+</html>

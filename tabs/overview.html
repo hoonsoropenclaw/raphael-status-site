@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系統總覽</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content active">
+        <div class="section">
+            <div class="section-title">核心數據</div>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="card">
+                    <div class="stat-value purple">152</div>
+                    <div class="stat-label">已安裝技能</div>
+                </div>
+                <div class="card">
+                    <div class="stat-value cyan">3</div>
+                    <div class="stat-label">記憶搜尋層級</div>
+                </div>
+                <div class="card">
+                    <div class="stat-value blue">8</div>
+                    <div class="stat-label">並發子代理上限</div>
+                </div>
+                <div class="card">
+                    <div class="stat-value green">7</div>
+                    <div class="stat-label">核心 MD 檔案</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">身份定位</div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="card">
+                    <div style="font-size:24px;margin-bottom:8px">🤖</div>
+                    <div style="font-weight:600;font-size:14px">策略型代理</div>
+                    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">專注高層决策與任務規劃</div>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px;margin-bottom:8px">🧠</div>
+                    <div style="font-weight:600;font-size:14px">超級學習者</div>
+                    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">指數成長，每次學習建立在上一次基礎上</div>
+                </div>
+                <div class="card">
+                    <div style="font-size:24px;margin-bottom:8px">🔄</div>
+                    <div style="font-weight:600;font-size:14px">泛化工作流</div>
+                    <div style="font-size:12px;color:var(--text-muted);margin-top:4px">相似度 >= 70% 套用 SOP，否則自主判斷</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">五大核心能力 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;margin-left:12px">雷達圖＋卡片</span></div>
+
+            <div class="grid" style="grid-template-columns: 1fr 1.2fr;gap:24px;align-items:start">
+                <!-- 左側：能力雷達圖 -->
+                <div class="card" style="text-align:center">
+                    <div style="font-size:13px;color:var(--text-muted);margin-bottom:8px">能力雷達圖（滿分 100）</div>
+                    <svg id="capability-radar" width="320" height="320" viewBox="0 0 320 320" style="display:block;margin:0 auto">
+                        <!-- 網格 -->
+                        <circle cx="160" cy="160" r="27.5" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2,3"/>
+                        <circle cx="160" cy="160" r="55.0" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2,3"/>
+                        <circle cx="160" cy="160" r="82.5" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="2,3"/>
+                        <circle cx="160" cy="160" r="110.0" fill="none" stroke="rgba(139,92,246,0.4)" stroke-width="1.5" stroke-dasharray="none"/>
+                        <!-- 軸線 -->
+                        <line x1="160" y1="160" x2="160.00" y2="50.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="255.26" y2="105.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="255.26" y2="215.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="160.00" y2="270.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="64.74" y2="215.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="160" y1="160" x2="64.74" y2="105.00" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <!-- 標籤 -->
+                        <text x="160.00" y="28.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">節省 Tokens</text>
+                        <text x="160.00" y="42.00" text-anchor="middle" dominant-baseline="middle" fill="#3b82f6" font-size="11" font-weight="700">25/100</text>
+                        <text x="274.32" y="94.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">生活自動化</text>
+                        <text x="274.32" y="108.00" text-anchor="middle" dominant-baseline="middle" fill="#a855f7" font-size="11" font-weight="700">30/100</text>
+                        <text x="274.32" y="226.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">知識管理</text>
+                        <text x="274.32" y="240.00" text-anchor="middle" dominant-baseline="middle" fill="#06b6d4" font-size="11" font-weight="700">55/100</text>
+                        <text x="160.00" y="292.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">網站建造</text>
+                        <text x="160.00" y="306.00" text-anchor="middle" dominant-baseline="middle" fill="#10b981" font-size="11" font-weight="700">70/100</text>
+                        <text x="45.68" y="226.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">自我學習</text>
+                        <text x="45.68" y="240.00" text-anchor="middle" dominant-baseline="middle" fill="#eab308" font-size="11" font-weight="700">40/100</text>
+                        <text x="45.68" y="94.00" text-anchor="middle" dominant-baseline="middle" fill="#e2e8f0" font-size="12" font-weight="600">泛化工作流</text>
+                        <text x="45.68" y="108.00" text-anchor="middle" dominant-baseline="middle" fill="#f97316" font-size="11" font-weight="700">35/100</text>
+                        <!-- 多邊形 -->
+                        <polygon points="160.00,132.50 188.58,143.50 212.39,190.25 160.00,237.00 121.89,182.00 126.66,140.75" fill="rgba(139,92,246,0.25)" stroke="#a855f7" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- 資料點 -->
+                        <circle cx="160.00" cy="132.50" r="4" fill="#3b82f6" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="188.58" cy="143.50" r="4" fill="#a855f7" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="212.39" cy="190.25" r="4" fill="#06b6d4" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="160.00" cy="237.00" r="4" fill="#10b981" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="121.89" cy="182.00" r="4" fill="#eab308" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="126.66" cy="140.75" r="4" fill="#f97316" stroke="#0f172a" stroke-width="2"/>
+                        <!-- 中心點 -->
+                        <circle cx="160" cy="160" r="3" fill="#a855f7"/>
+                    </svg>
+                    <div style="font-size:11px;color:var(--text-muted);margin-top:8px;line-height:1.5">
+                        目前分數偏低，<br>
+                        等「無盡學習系統」完成後會自動累積
+                    </div>
+                </div>
+
+                <!-- 右側：能力卡片 -->
+                <div class="grid" style="grid-template-columns: 1fr;gap:8px">
+                    <div class="card" style="border-left:4px solid var(--accent-blue)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">1. 節省 Tokens 專家</div>
+                            <div style="font-size:13px;color:var(--accent-blue);font-weight:700">25<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">動態詞元壓縮、免費 API 探勘、智慧路由切換、脈絡爆炸管理</div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-purple)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">2. 強力生活管家</div>
+                            <div style="font-size:13px;color:var(--accent-purple);font-weight:700">30<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">自動化訂票、智能商品比價、新聞摘要簡報、工作流自動化</div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-cyan)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">3. 筆記及檔案整理專家</div>
+                            <div style="font-size:13px;color:var(--accent-cyan);font-weight:700">55<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">知識庫重構、心智圖生成、檔案標籤系統、快速索引搜尋</div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-green)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">4. 網站建造專家</div>
+                            <div style="font-size:13px;color:var(--accent-green);font-weight:700">70<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">專業網站架設、Vercel/Netlify 部署、Google Apps Script、簡報自動化</div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-yellow)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">5. 自我學習專家</div>
+                            <div style="font-size:13px;color:var(--accent-yellow);font-weight:700">40<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">熱門趨勢監測、技能自主安裝、持續優化演化、技能創建框架</div>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--accent-orange)">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div style="font-weight:600;font-size:14px">6. 泛化工作流專家</div>
+                            <div style="font-size:13px;color:var(--accent-orange);font-weight:700">35<span style="font-size:10px;color:var(--text-muted)">/100</span></div>
+                        </div>
+                        <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">案例搜尋引擎（相似度 >= 70%）、SOP 匹配、經驗傳承機制</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">協作關係</div>
+            <div class="card" style="background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(6,182,212,0.08))">
+                <div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap">
+                    <div style="text-align:center">
+                        <div style="font-size:40px;margin-bottom:8px">🦾</div>
+                        <div style="font-weight:700;font-size:14px">拉斐爾 (Raphael)</div>
+                        <div style="font-size:12px;color:var(--text-muted)">N100 執行代理</div>
+                        <div style="font-size:11px;color:var(--text-secondary);margin-top:4px">24/7 運行 · 專注自動化執行</div>
+                    </div>
+                    <div style="flex:1;text-align:center;color:var(--text-muted);font-size:24px">↔</div>
+                    <div style="text-align:center">
+                        <div style="font-size:40px;margin-bottom:8px">🧠</div>
+                        <div style="font-weight:700;font-size:14px">赫米斯 (Hermes)</div>
+                        <div style="font-size:12px;color:var(--text-muted)">主力策略代理</div>
+                        <div style="font-size:11px;color:var(--text-secondary);margin-top:4px">策略規劃 · 高層決策</div>
+                    </div>
+                </div>
+                <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;color:var(--text-secondary)">
+                    <strong style="color:var(--accent-cyan)">策略-執行協作</strong>：赫米斯負責决策與規劃，拉斐爾專注執行與優化，形成互補的雙代理系統。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">相關站台 <span style="font-size:12px;color:var(--text-muted);font-weight:normal;margin-left:12px">已部署的對外服務</span></div>
+            <div class="related-sites">
+                <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener" class="related-link">
+                    <div class="related-icon">📘</div>
+                    <div class="related-info">
+                        <div class="related-title">Hermes 指令大全</div>
+                        <div class="related-desc">CLI 指令（29 個）＋ Slash 指令（63 個）線上查閱</div>
+                    </div>
+                    <div class="related-arrow">→</div>
+                </a>
+                <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener" class="related-link">
+                    <div class="related-icon">💻</div>
+                    <div class="related-info">
+                        <div class="related-title">GitHub Repos</div>
+                        <div class="related-desc">所有專案原始碼 · hoonsoropenclaw 帳號</div>
+                    </div>
+                    <div class="related-arrow">→</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Status Footer (跨 tab 共用) -->
+        <div class="status-footer">
+            <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+            <div class="status-footer-links">
+                <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+                <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+            </div>
+        </div>
+</div>
+</body>
+</html>

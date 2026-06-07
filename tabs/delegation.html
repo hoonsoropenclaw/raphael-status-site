@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>委派系統</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">委派引擎核心參數</div>
+            <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(139,92,246,0.08))">
+                <div style="font-size:14px;color:var(--accent-blue);margin-bottom:8px">⚙️ 赫米斯採用 Hermes Agent 原生委派機制</div>
+                <div style="font-size:13px;color:var(--text-secondary)">
+                    子代理（sub-agent）透過 <strong>delegate_task</strong> 工具Spawn，可同時運行多達 8 個並發子代理，適合平行處理多工作業。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">委派參數表</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>目前值</th><th>說明</th></tr>
+                    <tr><td>max_concurrent_children</td><td>8</td><td>最大並發子代理數量</td></tr>
+                    <tr><td>max_spawn_depth</td><td>1</td><td>委派深度（1 = 葉節點，不可再委託）</td></tr>
+                    <tr><td>child_timeout_seconds</td><td>1800</td><td>子代理超時時間（30 分鐘）</td></tr>
+                    <tr><td>tool_use_enforcement</td><td>true</td><td>嚴格工具使用管制</td></tr>
+                    <tr><td>orchestrator_enabled</td><td>true</td><td>允許 Orchestrator 角色</td></tr>
+                    <tr><td>subagent_auto_approve</td><td>false</td><td>子代理需手動審批危險命令</td></tr>
+                    <tr><td>inherit_mcp_toolsets</td><td>true</td><td>子代理繼承父代理 MCP 工具</td></tr>
+                    <tr><td>max_iterations</td><td>50</td><td>子代理最大迭代次數</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">委派流程圖</div>
+            <div class="flowchart">
+                <div class="flowchart-title">delegate_task 工作流程</div>
+                <div class="flow-row">
+                    <div class="flow-box flow-start">主代理規劃</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box flow-process">delegate_task</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-box flow-process">Spawn 子代理（隔離上下文）</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-branch">
+                        <div class="flow-branch-item">
+                            <div class="flow-label">最多 8 個並發</div>
+                            <div class="flow-box flow-process">子代理 A</div>
+                            <div class="flow-box flow-process">子代理 B</div>
+                            <div class="flow-box flow-process">子代理 C</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-box flow-process">各自獨立執行（30 分鐘超時）</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-box flow-end">結果彙總 → 回報主代理</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">委派工具集（toolsets）</div>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">🌐</div><div style="font-size:12px">web</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">💻</div><div style="font-size:12px">terminal</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">📁</div><div style="font-size:12px">file</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">🔍</div><div style="font-size:12px">search</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">⏰</div><div style="font-size:12px">cronjob</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">📋</div><div style="font-size:12px">todo</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">🖼️</div><div style="font-size:12px">vision</div></div>
+                <div class="card" style="text-align:center"><div style="font-size:20px;margin-bottom:4px">🔧</div><div style="font-size:12px">skills</div></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">角色說明</div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card" style="border-left:4px solid var(--accent-blue)">
+                    <div style="font-weight:600;font-size:14px;margin-bottom:8px">leaf（預設）</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">專注工作者，無法再委託。可用工具：終端、檔案、搜尋、瀏覽、視覺、程式、Cron等。</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-purple)">
+                    <div style="font-weight:600;font-size:14px;margin-bottom:8px">orchestrator</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">協調者，保有 delegate_task 可Spawn自己的_worker（但目前 max_spawn_depth=1，被強制降為 leaf）。</div>
+                </div>
+            </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

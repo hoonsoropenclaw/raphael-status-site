@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>即時儀表板</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">赫米斯狀態</div>
+            <div class="info-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="card" style="border-left:4px solid var(--accent-green)">
+                    <div style="display:flex;align-items:center;gap:12px">
+                        <div class="status-dot"></div>
+                        <div>
+                            <div style="font-weight:700;font-size:16px">運行中</div>
+                            <div style="font-size:12px;color:var(--text-muted)">系統正常</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:700;font-size:16px;color:var(--accent-purple)">152</div>
+                    <div style="font-size:12px;color:var(--text-muted)">已安裝技能</div>
+                </div>
+                <div class="card">
+                    <div style="font-weight:700;font-size:16px;color:var(--accent-blue)">MiniMax-M2.7</div>
+                    <div style="font-size:12px;color:var(--text-muted)">當前模型</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">工具能力矩陣</div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>能力</th><th>狀態</th><th>說明</th></tr>
+                    <tr><td>網頁搜尋</td><td><span class="tag tag-green">啟用</span></td><td>雙軌：Ollama Web Search + Tavily</td></tr>
+                    <tr><td>終端機操作</td><td><span class="tag tag-green">啟用</span></td><td>Bash / Git / npm / Vercel CLI</td></tr>
+                    <tr><td>檔案管理</td><td><span class="tag tag-green">啟用</span></td><td>讀寫 / 搜尋 / patch 編輯</td></tr>
+                    <tr><td>三層記憶搜尋</td><td><span class="tag tag-green">啟用</span></td><td>session → mempalace → LLM re-rank</td></tr>
+                    <tr><td>委派系統</td><td><span class="tag tag-green">啟用</span></td><td>8 並發子代理，30 分鐘超時</td></tr>
+                    <tr><td>Cron 排程</td><td><span class="tag tag-yellow">受控</span></td><td>cron_mode: deny（需主動觸發）</td></tr>
+                    <tr><td>Kanban 工作流</td><td><span class="tag tag-green">啟用</span></td><td>自動拆解 / 失敗限制</td></tr>
+                    <tr><td>Curator 維護</td><td><span class="tag tag-green">啟用</span></td><td>每週自動執行</td></tr>
+                    <tr><td>危險命令審批</td><td><span class="tag tag-red">關閉</span></td><td>approvals.mode: off</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">可用 API 服務</div>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>服務</th><th>狀態</th><th>用途</th></tr>
+                    <tr><td>MiniMax</td><td><span class="tag tag-green">主要</span></td><td>模型推理</td></tr>
+                    <tr><td>Twelve Data</td><td><span class="tag tag-green">已設定</span></td><td>金融即時報價</td></tr>
+                    <tr><td>Alpha Vantage</td><td><span class="tag tag-green">已設定</span></td><td>股票/外匯數據</td></tr>
+                    <tr><td>FRED</td><td><span class="tag tag-green">已設定</span></td><td>美國經濟指標</td></tr>
+                    <tr><td>Finnhub</td><td><span class="tag tag-green">已設定</span></td><td>公司新聞情緒</td></tr>
+                    <tr><td>ClawHub</td><td><span class="tag tag-green">已設定</span></td><td>自訂金融源</td></tr>
+                    <tr><td>GitHub PAT</td><td><span class="tag tag-green">已設定</span></td><td>Repo 操作</td></tr>
+                    <tr><td>Vercel</td><td><span class="tag tag-green">已設定</span></td><td>網站部署</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">系統能力雷達</div>
+            <div class="card">
+                <div style="font-size:13px;color:var(--text-secondary);line-height:2">
+                    <span class="tag tag-green" style="margin:4px">🤖 AI Agent 核心</span>
+                    <span class="tag tag-green" style="margin:4px">🧠 三層記憶系統</span>
+                    <span class="tag tag-green" style="margin:4px">📊 金融數據整合</span>
+                    <span class="tag tag-green" style="margin:4px">🌐 網站建構部署</span>
+                    <span class="tag tag-green" style="margin:4px">📄 文件自動化</span>
+                    <span class="tag tag-green" style="margin:4px">🎬 多媒體生成</span>
+                    <span class="tag tag-green" style="margin:4px">🔍 網頁爬蟲</span>
+                    <span class="tag tag-green" style="margin:4px">⏰ 排程自動化</span>
+                    <span class="tag tag-green" style="margin:4px">🔗 API 整合</span>
+                    <span class="tag tag-green" style="margin:4px">📱 跨平台開發</span>
+                    <span class="tag tag-green" style="margin:4px">🎨 視覺設計</span>
+                    <span class="tag tag-green" style="margin:4px">🗺️ 架構圖生成</span>
+                    <span class="tag tag-purple" style="margin:4px">⚡ GSAP 動畫</span>
+                    <span class="tag tag-yellow" style="margin:4px">🔧 自我優化</span>
+                </div>
+            </div>
+        </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

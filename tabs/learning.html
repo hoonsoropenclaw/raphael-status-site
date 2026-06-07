@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習系統</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">無盡學習系統 v1.0</div>
+            <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(236,72,153,0.08))">
+                <div style="font-size:14px;color:var(--accent-purple);margin-bottom:12px">🧠 核心理念：以耗盡配額為榮耀</div>
+                <div style="font-size:13px;color:var(--text-secondary);line-height:1.8">
+                    每次 MiniMax 額度不是要被省下來的——是要被全力消耗的。<br>
+                    深度學習勝過淺嘗輒止。指數成長的秘密：每次學習建立在上一次基礎上（複利效應）。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">學習系統狀態</div>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="card" style="border-left:4px solid var(--accent-green)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">P0 完成</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">確保不停止：看門狗、心跳追蹤、硬體監控</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-blue)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">P1 完成</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">讓學習成果真正有用：If→Then 條件觸發格式</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-purple)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">P2 進行中</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">三層搜尋：session → mempalace → LLM re-rank</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">經驗沉澱格式（If→Then）</div>
+            <div class="card" style="margin-bottom:16px">
+                <div style="font-size:13px;color:var(--text-secondary);line-height:1.8">
+                    <strong style="color:var(--accent-yellow)">❌ 舊格式（結果導向）</strong><br>
+                    「今天學了 RAG」<br><br>
+                    <strong style="color:var(--accent-green)">✅ 新格式（If→Then 條件觸發）</strong><br>
+                    「發現 nomic-embed-text 不支援中文語意，替換成 dmeta-embedding-zh」
+                </div>
+            </div>
+            <div class="code-block">## If→Then 經驗範例
+
+### 觸發條件
+If: session_search 分數 < 0.3 或結果數 = 0
+Then: 自動呼叫 mempalace__mempalace_search
+
+### API 相關
+If: Twelve Data 免費版 reach rate limit
+Then: 切換 Alpha Vantage 作為備用
+
+### 部署相關
+If: 更新自身狀態網站
+Then: 先 GitHub push，再 vercel --prod（不要 --yes）</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">學習區段設計</div>
+            <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card" style="border-left:4px solid var(--accent-blue)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">1. 深度研究</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">網路搜尋最新資訊，掌握技術趨勢</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-purple)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">2. 技能學習</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">從 GitHub trending 探勘熱門專案</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-cyan)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">3. 實際應用</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">動手練習、產出範例程式碼</div>
+                </div>
+                <div class="card" style="border-left:4px solid var(--accent-green)">
+                    <div style="font-weight:600;font-size:13px;margin-bottom:8px">4. 作品產生</div>
+                    <div style="font-size:12px;color:var(--text-secondary)">每區段產出完整作品（腳本、文件、報告）</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Curator 自動維護</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                    <tr><td>enabled</td><td>true</td><td>自動啟用</td></tr>
+                    <tr><td>interval_hours</td><td>168</td><td>每週執行一次</td></tr>
+                    <tr><td>stale_after_days</td><td>30</td><td>30 天無效技能標記過期</td></tr>
+                    <tr><td>archive_after_days</td><td>90</td><td>90 天後歸檔</td></tr>
+                    <tr><td>backup.keep</td><td>5</td><td>保留最近 5 個備份</td></tr>
+                </table>
+            </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

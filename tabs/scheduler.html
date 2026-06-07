@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排程自動化</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+    <!-- Hero Banner -->
+    <div class="card" style="margin-bottom:20px;background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.12));border:1px solid rgba(59,130,246,0.2);padding:20px 24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="font-size:22px;">⏰</span>
+            <span style="font-size:16px;font-weight:700;color:var(--text-primary);">赫米斯 Cron 自動化系統</span>
+        </div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">
+            所有排程任務由 <code style="background:rgba(59,130,246,0.1);padding:1px 6px;border-radius:4px;font-size:12px;">hermes cron</code> 管理，
+            由主代理主動建立並掌控。<code style="background:rgba(239,68,68,0.1);color:#ef4444;padding:1px 6px;border-radius:4px;font-size:12px;">cron_mode: deny</code>
+            拒絕外部自動 Cron 侵入。
+        </div>
+    </div>
+
+    <!-- Active Jobs -->
+    <div class="section">
+        <div class="section-title">排程任務 (6)</div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>狀態</th>
+                        <th>名稱</th>
+                        <th>排程</th>
+                        <th>下次執行</th>
+                        <th>上次狀態</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr data-cron-name="metacognitive-learner-24h">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">6edfe150</span></td>
+    <td><span class="skill-name" style="font-weight:600">metacognitive-learner-24h</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">every 120m</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-05T01:20</td>
+    <td><span class="tag tag-green">ok</span></td>
+    <td style="font-size:12px;color:#94a3b8">metacognitive-learner</td>
+</tr>
+<tr data-cron-name="評價網站每日檢查">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">1f8020b9</span></td>
+    <td><span class="skill-name" style="font-weight:600">評價網站每日檢查</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">0 9 * * *</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-05T09:00</td>
+    <td><span class="tag tag-green">ok</span></td>
+    <td style="font-size:12px;color:#94a3b8">-</td>
+</tr>
+<tr data-cron-name="scheduler-sync">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">06ee7e5e</span></td>
+    <td><span class="skill-name" style="font-weight:600">scheduler-sync</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">0 0 * * *</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-06T00:00</td>
+    <td><span class="tag tag-green">ok</span></td>
+    <td style="font-size:12px;color:#94a3b8">no-agent</td>
+</tr>
+<tr data-cron-name="eval-sync">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">59183810</span></td>
+    <td><span class="skill-name" style="font-weight:600">eval-sync</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">0 10 * * *</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-05T10:00</td>
+    <td><span class="tag tag-yellow">never</span></td>
+    <td style="font-size:12px;color:#94a3b8">no-agent</td>
+</tr>
+<tr data-cron-name="skill-usage-daily-v3">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">d99463f2</span></td>
+    <td><span class="skill-name" style="font-weight:600">skill-usage-daily-v3</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">0 0 * * *</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-06T00:00</td>
+    <td><span class="tag tag-green">ok</span></td>
+    <td style="font-size:12px;color:#94a3b8">no-agent</td>
+</tr>
+<tr data-cron-name="md-files-daily-sync">
+    <td style="text-align:center"><span class="tag tag-blue" style="font-family:monospace">67fc8c74</span></td>
+    <td><span class="skill-name" style="font-weight:600">md-files-daily-sync</span></td>
+    <td><code style="font-size:11px;background:rgba(59,130,246,0.12);padding:2px 8px;border-radius:4px;white-space:nowrap">0 9 * * *</code></td>
+    <td style="font-size:12px;color:#94a3b8;white-space:nowrap">2026-06-05T09:00</td>
+    <td><span class="tag tag-yellow">never</span></td>
+    <td style="font-size:12px;color:#94a3b8">no-agent</td>
+</tr>
+        </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Config Parameters -->
+    <div class="section">
+        <div class="section-title">排程參數</div>
+        <div class="table-wrap">
+            <table class="config-table">
+                <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                <tr><td>wrap_response</td><td><span class="tag tag-green">true</span></td><td>Cron 結果自動包裝回傳</td></tr>
+                <tr><td>cron_mode</td><td><span class="tag tag-red">deny</span></td><td>拒絕自動 Cron 模式</td></tr>
+                <tr><td>max_parallel_jobs</td><td><span class="tag tag-yellow">null</span></td><td>無並發限制</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Kanban -->
+    <div class="section">
+        <div class="section-title">Kanban 工作流</div>
+        <div class="card" style="margin-bottom:12px;background:linear-gradient(135deg,rgba(139,92,246,0.06),rgba(6,182,212,0.06));border:1px solid rgba(139,92,246,0.15)">
+            <div style="font-size:13px;color:var(--text-secondary);line-height:1.8;">
+                赫米斯整合 Kanban 工作流，透過 <strong>hermes kanban</strong> 介面管理任務分派與追蹤。
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="config-table">
+                <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                <tr><td>dispatch_in_gateway</td><td><span class="tag tag-green">true</span></td><td>在 Gateway 層分派任務</td></tr>
+                <tr><td>dispatch_interval_seconds</td><td><span class="tag tag-blue">60</span></td><td>分派間隔 60 秒</td></tr>
+                <tr><td>failure_limit</td><td><span class="tag tag-orange">2</span></td><td>失敗 2 次自動停止</td></tr>
+                <tr><td>auto_decompose</td><td><span class="tag tag-green">true</span></td><td>自動拆解大型任務</td></tr>
+                <tr><td>auto_decompose_per_tick</td><td><span class="tag tag-blue">3</span></td><td>每 tick 最多拆解 3 個子任務</td></tr>
+                <tr><td>dispatch_stale_timeout_seconds</td><td><span class="tag tag-yellow">14400</span></td><td>停滯 4 小時自動釋放</td></tr>
+            </table>
+        </div>
+    </div>
+</div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

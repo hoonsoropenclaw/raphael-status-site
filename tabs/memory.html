@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記憶系統</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">三層備援搜尋機制</div>
+            <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(6,182,212,0.08))">
+                <div style="font-size:14px;color:var(--accent-purple);margin-bottom:8px">🧠 核心理念：當 session_search 搜尋不到時，使用 MemPalace 語意搜尋</div>
+                <div style="font-size:13px;color:var(--text-secondary)">
+                    MemPalace 是拉斐爾建立的長期記憶系統，採用房間/抽屜/翅膀結構儲存語意知識。三層搜尋確保持記憶召回零遺漏。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">搜尋流程圖</div>
+            <div class="flowchart">
+                <div class="flowchart-title">赫米斯三層記憶搜尋流程</div>
+                <div class="flow-row">
+                    <div class="flow-box flow-start">任務輸入</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box flow-decision">Phase 1</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-box flow-process">session_search</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-branch">
+                        <div class="flow-branch-item">
+                            <div class="flow-label">分數 >= 0.3</div>
+                            <div class="flow-arrow" style="transform:rotate(-90deg)">↙</div>
+                        </div>
+                        <div class="flow-branch-item" style="margin-top:40px">
+                            <div class="flow-label">分數 < 0.3</div>
+                            <div class="flow-arrow" style="transform:rotate(90deg)">↘</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-row" style="margin-top:0">
+                    <div class="flow-branch">
+                        <div class="flow-branch-item">
+                            <div class="flow-box flow-end">✅ 直接使用結果</div>
+                        </div>
+                        <div class="flow-branch-item">
+                            <div class="flow-box flow-decision">Phase 2</div>
+                            <div class="flow-arrow" style="margin:4px 0">↓</div>
+                            <div class="flow-box flow-process">mempalace_search</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-branch">
+                        <div class="flow-branch-item">
+                            <div class="flow-label">分數 >= 0.4</div>
+                            <div class="flow-arrow" style="transform:rotate(-90deg)">↙</div>
+                        </div>
+                        <div class="flow-branch-item" style="margin-top:40px">
+                            <div class="flow-label">分數 < 0.4 或 結果 > 10</div>
+                            <div class="flow-arrow" style="transform:rotate(90deg)">↘</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-row" style="margin-top:0">
+                    <div class="flow-branch">
+                        <div class="flow-branch-item">
+                            <div class="flow-box flow-end">✅ 使用 mempalace 結果</div>
+                        </div>
+                        <div class="flow-branch-item">
+                            <div class="flow-box flow-decision">Phase 3</div>
+                            <div class="flow-arrow" style="margin:4px 0">↓</div>
+                            <div class="flow-box flow-process">LLM Re-rank (MiniMax)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-box flow-end">✅ 取分數最高 3-5 條</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">三層詳解</div>
+            <div class="layer-diagram">
+                <div class="layer-item" style="border-left:4px solid var(--accent-blue)">
+                    <div class="layer-num" style="background:rgba(59,130,246,0.15);color:var(--accent-blue)">P1</div>
+                    <div class="layer-info">
+                        <div class="layer-title">Phase 1 — session_search（本地對話記錄）</div>
+                        <div class="layer-desc">先用內建工具搜尋本地對話記錄，FTS5 向量搜尋，速度快、成本低</div>
+                        <div class="layer-threshold">觸發條件：分數 >= 0.3 → 直接使用結果</div>
+                    </div>
+                    <span class="tag tag-blue">快速</span>
+                </div>
+                <div class="layer-item" style="border-left:4px solid var(--accent-purple)">
+                    <div class="layer-num" style="background:rgba(139,92,246,0.15);color:var(--accent-purple)">P2</div>
+                    <div class="layer-info">
+                        <div class="layer-title">Phase 2 — mempalace__mempalace_search（語意搜尋）</div>
+                        <div class="layer-desc">MemPalace MCP 工具，向量語意搜尋備援記憶系統，涵蓋領域技術棧、IF→THEN 模式、每日日記</div>
+                        <div class="layer-threshold">觸發條件：Phase 1 分數 < 0.3 或結果數 = 0</div>
+                    </div>
+                    <span class="tag tag-purple">備援</span>
+                </div>
+                <div class="layer-item" style="border-left:4px solid var(--accent-cyan)">
+                    <div class="layer-num" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan)">P3</div>
+                    <div class="layer-info">
+                        <div class="layer-title">Phase 3 — LLM Re-rank（MiniMax 語意重排序）</div>
+                        <div class="layer-desc">當 Phase 2 結果分數 < 0.4 或結果過多（> 10 條）時，使用 MiniMax LLM 對候選結果重新排序，取最高的 3-5 條</div>
+                        <div class="layer-threshold">觸發條件：Phase 2 分數 < 0.4 或結果數 > 10</div>
+                    </div>
+                    <span class="tag tag-cyan">深度</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">LLM Re-rank Prompt 模板</div>
+            <div class="code-block">你是記憶檢索助手。請根據以下查詢和候選記憶，評估每條記憶的相關性並重新排序。
+
+原始查詢：{query}
+
+候選記憶：
+{index}. [{source}] 相似度={score}
+{text_preview}
+
+請以 JSON 格式輸出：
+{{"ranked": [{{"index": N, "reason": "為什麼相關", "new_score": 0-1}}]}}
+只輸出 JSON，不要其他文字。</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">MemPalace 路徑</div>
+            <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card">
+                    <div class="card-title">主要路徑</div>
+                    <div style="margin-top:8px;font-family:monospace;font-size:12px;color:var(--accent-cyan)">~/.hermes/mempalace/</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">備援路徑</div>
+                    <div style="margin-top:8px;font-family:monospace;font-size:12px;color:var(--accent-cyan)">~/.mempalace/</div>
+                </div>
+            </div>
+        </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

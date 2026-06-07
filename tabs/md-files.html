@@ -1,0 +1,66 @@
+<!-- 核心MD檔 Tab：純 HTML 結構，無 inline script、無 inline CSS -->
+<!-- 樣式：tabs/md-files.css | 邏輯：js/md-files.js | 資料：assets/md-files.json -->
+
+<div id="tab-content">
+    <div class="section">
+        <div class="section-title">七大核心 MD 檔案</div>
+        <div class="info-banner">
+            <span>⚠️ 重要原則：所有核心 MD 檔案的內容應保持一致，不得相互牴觸。</span>
+            <span class="info-sub">點擊任一卡片展開內容，展開後可一鍵複製全部內容。</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="sync-status-bar">
+            <span>📂 ~/.hermes/memories/</span>
+            <span id="sync-time">載入中...</span>
+        </div>
+        <div id="files-grid"></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">記憶體啟動程序</div>
+        <div class="flowchart">
+            <div class="flowchart-title">每次啟動 Session 的讀取順序</div>
+            <div class="flow-row">
+                <div class="flow-box flow-start">讀取 SOUL.md</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box flow-start">讀取 USER.md</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box flow-start">讀取 MEMORY.md</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box flow-start">讀取 HEARTBEAT.md</div>
+            </div>
+            <div class="flow-row">
+                <div class="flow-box flow-sub">人格定義 → 使用者資訊 → 長期記憶 → 任務清單</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">資料夾結構</div>
+        <div class="code-block">~/.hermes/
+├── memories/          # 7 核心人格檔案
+│   ├── SOUL.md        # 超級學習者人格定義
+│   ├── USER.md        # 使用者資訊
+│   ├── HEARTBEAT.md   # 心跳/任務清單
+│   ├── AGENTS.md      # 工作區說明
+│   ├── IDENTITY.md    # 代理身份卡
+│   ├── TOOLS.md       # 工具設定
+│   └── MEMORY.md      # 長期記憶
+├── skills/            # 技能目錄
+├── sessions/          # 對話記錄
+├── state.db           # SQLite 狀態儲存
+├── mempalace/         # MemPalace 長期記憶
+├── cron/              # 排程任務腳本
+└── config.yaml        # 主設定檔</div>
+    </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>

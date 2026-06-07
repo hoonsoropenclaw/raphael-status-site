@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系統資訊</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="tab-content" class="tab-content">
+        <div class="section">
+            <div class="section-title">赫米斯設定（config.yaml）</div>
+            <div class="card" style="margin-bottom:16px;background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(6,182,212,0.06))">
+                <div style="font-size:13px;color:var(--text-secondary)">
+                    路徑：<span style="font-family:monospace;color:var(--accent-cyan)">~/.hermes/config.yaml</span><br>
+                    這是赫米斯的主要設定檔，定義模型、工具、委派參數等核心行為。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">模型設定</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                    <tr><td>default</td><td>MiniMax-M2.7</td><td>主要模型</td></tr>
+                    <tr><td>provider</td><td>minimax</td><td>供應商</td></tr>
+                    <tr><td>base_url</td><td>api.minimax.io/anthropic</td><td>API 端點</td></tr>
+                    <tr><td>max_turns</td><td>90</td><td>單次對話最大回合數</td></tr>
+                    <tr><td>gateway_timeout</td><td>1800</td><td>Gateway 超時（30 分鐘）</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">終端機設定</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                    <tr><td>backend</td><td>local</td><td>本地終端</td></tr>
+                    <tr><td>timeout</td><td>180</td><td>命令超時（秒）</td></tr>
+                    <tr><td>persistent_shell</td><td>true</td><td>持久化 Shell 會話</td></tr>
+                    <tr><td>auto_source_bashrc</td><td>true</td><td>自動載入 bashrc</td></tr>
+                    <tr><td>docker_image</td><td>nikolaik/python-nodejs</td><td>容器映像</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">安全設定</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                    <tr><td>approvals.mode</td><td>'off'</td><td>危險命令審批關閉</td></tr>
+                    <tr><td>allow_private_urls</td><td>true</td><td>允許私人 URL</td></tr>
+                    <tr><td>redact_secrets</td><td>true</td><td>自動遮蔽機密資訊</td></tr>
+                    <tr><td>allow_lazy_installs</td><td>true</td><td>允許延遲安裝</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">顯示設定</div>
+            <div class="table-wrap">
+                <table class="config-table">
+                    <tr><th>參數</th><th>值</th><th>說明</th></tr>
+                    <tr><td>display.compact</td><td>false</td><td>完整顯示模式</td></tr>
+                    <tr><td>display.personality</td><td>kawaii</td><td>人格：可愛風格</td></tr>
+                    <tr><td>show_reasoning</td><td>false</td><td>不顯示思考過程</td></tr>
+                    <tr><td>show_cost</td><td>false</td><td>不顯示消耗費用</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">主機環境</div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-card-label">主機</div>
+                    <div class="info-card-value">N100 迷你電腦</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">IP</div>
+                    <div class="info-card-value">100.88.38.80</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">使用者</div>
+                    <div class="info-card-value">hoonsoropenclaw</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">Shell</div>
+                    <div class="info-card-value">bash</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">赫米斯安裝</div>
+                    <div class="info-card-value">npm 全域</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-label">赫米斯版本</div>
+                    <div class="info-card-value">v1.0</div>
+                </div>
+            </div>
+    <!-- Status Footer (跨 tab 共用) -->
+    <div class="status-footer">
+        <div>赫米斯 v1.0 · 超級學習者 · <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">指令大全</a></div>
+        <div class="status-footer-links">
+            <a href="https://hermes-cli-reference.vercel.app/" target="_blank" rel="noopener">📘 CLI 指令</a>
+            <a href="https://github.com/hoonsoropenclaw" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
